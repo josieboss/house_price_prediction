@@ -1,20 +1,31 @@
-"""Written by Omolewa"""
+"""Written by Joseph"""
 
 from ExtractLoad.utils.utils import ReadWriteFromS3, get_data
 
+import logging
+import pandas as pd
+from ExtractLoad import extract_main
+from FE.utils.utils import FeatureEngineering
+from general_utils import load_yaml
 
-########    Data Extraction   ##################
+##### Extract ##############
 
-def get_and_write_to_s3():
-    df = get_data("https://raw.githubusercontent.com/Amberlynnyandow/dsc-1-final-project-online-ds-ft-021119/master/kc_house_data.csv")
+params = load_yaml("param.yaml")
 
-    writeToS3 = ReadWriteFromS3.create_con_string(bucket_name="houseprice23",
-                                                  key="dev/train")
-
-    writeToS3.writeToS3(df=df,
-                        file_name="house_price")
+bucket = params["s3_params"]["bucket_name"]
+Key = params["s3_params"]["Key"]
 
 
-if __name__ == "__main__":
-    get_and_write_to_s3()
+extract_main.get_and_write_to_s3(bucket_name=bucket, key = Key)
 
+
+#### Transform #######
+
+# Load the dataframe that you wrote to s3
+# df =
+transform = FeatureEngineering(df)
+transform.run_process()
+# w,rite back to s3
+
+
+#### Model
