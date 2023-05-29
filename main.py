@@ -16,16 +16,16 @@ bucket = params["s3_params"]["bucket_name"]
 Key = params["s3_params"]["Key"]
 
 
-extract_main.get_and_write_to_s3(bucket_name=bucket, key = Key)
+extract_main.get_and_write_to_s3(bucket_name=bucket, key=Key)
 
 
-#### Transform #######
+### Transform #######
 
 # Load the dataframe that you wrote to s3
-# df =
+#df =
 transform = FeatureEngineering(df)
 transform.run_process()
 # w,rite back to s3
 
 
-#### Model
+

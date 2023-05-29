@@ -14,13 +14,13 @@ class ReadWriteFromS3:
     """This class is used to read and write to s3"""
     @classmethod
     def create_con_string(cls, bucket_name, key):
-        secret_key = config("aws_secret_key")
-        access_key = config("aws_access_key")
+        secret_key = config("secret_access_key")
+        access_key = config("access_key_id")
 
         s3_conn = boto3.resource("s3",
                                  aws_access_key_id=access_key, aws_secret_access_key=secret_key)
 
-        #s3_conn =  s3.Object(bucket_name, key)
+        # s3_conn = s3.Object(bucket_name, key)
         logging.info("Creating the connection strings")
 
         return cls(conn=s3_conn, bucket_name=bucket_name, key=key)
@@ -29,7 +29,6 @@ class ReadWriteFromS3:
         self.conn = conn
         self.bucket_name = bucket_name
         self.key = key
-
 
     def read_s3_file(self, num_row=None):
         """
@@ -77,11 +76,12 @@ class ReadWriteFromS3:
         :return: None
         """
         file_name = f"{self.key}/{file_name}.csv"
+        print(file_name)
         csv_buffer = StringIO()
+        print(df.shape)
         df.to_csv(csv_buffer, index=False)
         logging.info("Writing the dataframe to s3 bucket")
         self.conn.Object(self.bucket_name, file_name).put(Body=csv_buffer.getvalue())
-
     def create_s3_bucket(self):
         """
         Creates an S3 bucket with the given name
