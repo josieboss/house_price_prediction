@@ -1,5 +1,4 @@
 import pandas as pd
-from main import df
 
 
 class FeatureEngineering:
@@ -9,6 +8,8 @@ class FeatureEngineering:
 
     def extractDayMonthYear(self):
         """
+        This will split the date into day month and year
+        and insert into the column after the date in the dataframe
         """
         self.df['date'] = pd.to_datetime(self.df['date'])
         self.df.insert(2, 'day', self.df['date'].dt.day)
