@@ -20,7 +20,7 @@ The project utilizes a dataset consisting of various features related to residen
 Installation
 To run this project locally, please follow the instructions below:
 
-Clone the repository: git clone https://https://github.com/josieboss/house_price_prediction
+Clone the repository: git clone https://github.com/josieboss/house_price_prediction
 Navigate to the project directory: cd house-prices-prediction
 Install the required dependencies: pip install -r requirements.txt
 Usage
