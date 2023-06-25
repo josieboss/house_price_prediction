@@ -1,56 +1,46 @@
-# house_price_prediction
+# House prices prediction
 
-This project aims to predict house prices using machine learning techniques. The goal is to develop a model that can accurately estimate the prices of residential properties based on various features and attributes
+# Table of Contents
+1. [Project Description](#description)
+2. [Project Credentials](#credentials)
+    * [MongoDB Credentials](#mongo)
+    * [Resize Images](#crop-and-resize-all-images)
+    * [Checking Blurness of Images](#Checking-Blur)
+    * [Data Augmentation](#Data-Augmentation)
+4. [CNN Architecture](#neural-network-architecture)
+5. [Installation](#installation)
+6. [Results](#results)
+7. [References](#references)
+8. [Authors](#Authors)
 
-Table of Contents
-Introduction
-Data
-Installation
-Usage
-Model Training
-Evaluation
-Contributing
-License
-Introduction
-Predicting house prices is a critical task in the real estate industry. By leveraging historical data and relevant features, this project provides a machine learning solution to estimate the prices of houses. The predictive model developed here can assist buyers, sellers, and real estate agents in making informed decisions.
 
-Data
-The project utilizes a dataset consisting of various features related to residential properties, such as the number of bedrooms, square footage, location, and other relevant attributes. This dataset is used for training the machine learning model and evaluating its performance.
+## Project Description <a id="description"></a>
 
-Installation
-To run this project locally, please follow the instructions below:
 
-Clone the repository: git clone https://github.com/josieboss/house_price_prediction
-Navigate to the project directory: cd house-prices-prediction
-Install the required dependencies: pip install -r requirements.txt
-Usage
-Once the installation is complete, you can use the project as follows:
+## Project Credentials <a id="credentials"></a>
+The project is using **Decouple library** to manage all the necessary credentials.
+- A .env file must be created at the root of the project
+- all the credentials written to the file. example ''' mongodb_username=user1
+mongodb_password=user1password '''
 
-Prepare your own dataset or use the provided example dataset.
-Update the data file path in the project configuration.
-Run the prediction script: python predict.py
-The script will load the trained model and predict house prices based on the given input.
+##### MongoDB Credentials <a id="mongo"></a>
+- Mongo DB Credentials: It contains the username and password of the MongoDB user
+- MongoDB Connection string
 
-Model Training
-The model training process involves the following steps:
+## Installation <a id="installation"></a>
+* [Python (Minimum 3)](https://www.continuum.io/blog/developer-blog/python-3-support-anaconda)
+* [pandas](http://pandas.pydata.org/)
+* [Seaborn](https://seaborn.pydata.org/)
 
-Preprocessing: Cleaning and transforming the dataset, handling missing values, and encoding categorical variables.
-Feature Selection: Identifying the most relevant features for predicting house prices.
-Model Selection: Choosing the appropriate machine learning algorithm for training the model.
-Training: Splitting the dataset into training and validation sets, fitting the model on the training data, and fine-tuning hyperparameters.
-Saving: Saving the trained model for future use.
-You can explore the Jupyter Notebook or Python scripts in the repository for detailed implementation.
+## Authors
 
-Evaluation
-The performance of the predictive model is assessed using various evaluation metrics, such as mean squared error (MSE), root mean squared error (RMSE), and R-squared score. These metrics help gauge the accuracy and effectiveness of the model in predicting house prices.
+* **[Omolewa Adaramola](https://github.com/omolewadavids)**
+* [Blue Lambda Technologies LLC](https://www.bluelambdatechnologies.com/)
 
-Contributing
-Contributions to this project are always welcome. If you have any suggestions, improvements, or bug fixes, please follow these steps:
+## License
 
-Fork the repository.
-Create a new branch for your feature: git checkout -b feature-name.
-Make the necessary changes and commit them: git commit -m 'Add feature'.
-Push your changes to the branch: git push origin feature-name.
-Submit a pull request outlining the changes you have made.
-License
-This project is licensed under the MIT License. Feel free to modify and use the code for your purposes.
+* <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"> Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>
+
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
+</a>
