@@ -32,7 +32,7 @@ mongodb_password=user1password '''
 * [pandas](http://pandas.pydata.org/)
 * [Seaborn](https://seaborn.pydata.org/)
 
-## Authors
+## Authors.
 
 * **[Omolewa Adaramola](https://github.com/omolewadavids)**
 * [Blue Lambda Technologies LLC](https://www.bluelambdatechnologies.com/)
