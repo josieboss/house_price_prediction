@@ -1,6 +1,6 @@
 # house_price_prediction
 
-This project aims to predict house prices using machine learning techniques. The goal is to develop a model that can accurately estimate the prices of residential properties based on various features and attributes.
+This project aims to predict house prices using machine learning techniques. The goal is to develop a model that can accurately estimate the prices of residential properties based on various features and attributes
 
 Table of Contents
 Introduction
