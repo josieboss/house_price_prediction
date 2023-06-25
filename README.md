@@ -3,11 +3,11 @@
 # Table of Contents
 1. [Project Description](#description)
 2. [Project Credentials](#credentials)
-    * [MongoDB Credentials](#mongo)
+    * [AWS](#AWS)
     * [Resize Images](#crop-and-resize-all-images)
     * [Checking Blurness of Images](#Checking-Blur)
     * [Data Augmentation](#Data-Augmentation)
-4. [CNN Architecture](#neural-network-architecture)
+4. [githouse](#raw.githouse content)
 5. [Installation](#installation)
 6. [Results](#results)
 7. [References](#references)
@@ -20,12 +20,11 @@
 ## Project Credentials <a id="credentials"></a>
 The project is using **Decouple library** to manage all the necessary credentials.
 - A .env file must be created at the root of the project
-- all the credentials written to the file. example ''' mongodb_username=user1
-mongodb_password=user1password '''
+- all the credentials written to the file. example ''' AWS access key and secret key '''
 
-##### MongoDB Credentials <a id="mongo"></a>
-- Mongo DB Credentials: It contains the username and password of the MongoDB user
-- MongoDB Connection string
+##### AWS Credentials using boto3
+- AWS Credentials: It contains the access key and secret key 
+- AWS Connection string
 
 ## Installation <a id="installation"></a>
 * [Python (Minimum 3)](https://www.continuum.io/blog/developer-blog/python-3-support-anaconda)
@@ -34,7 +33,7 @@ mongodb_password=user1password '''
 
 ## Authors
 
-* **[Omolewa Adaramola](https://github.com/omolewadavids)**
+* **[josieboss](https://github.com/josieboss)**
 * [Blue Lambda Technologies LLC](https://www.bluelambdatechnologies.com/)
 
 ## License
